@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigation</title>
+    <style>
+        .navbar{
+            color: black;
+            /* background-color: rgb(19, 120, 220); */
+            border-radius: 30px;
+            height: 60px;
+            display: inline;
+        }
+        .navbar li{
+            list-style: none; 
+        }
+        
+        nav.a{
+            height: 30px;
+        }
+         .navvbar ul{
+            overflow: auto; 
+            height: ;
+           
+        }
+        .navbar li{
+            float: left;   
+            list-style: none;
+            padding: 8px 8px;
+            margin: 6px 6px;
+           font-size:40px;
+            width: 150px;
+            background-color: rgb(174, 212, 250);
+            height:20px;
+
+        }
+        .navbar li a{
+            color: black;
+            margin: 7px;
+            padding: 7px;
+            text-decoration: none;  
+            font-size: medium;
+            
+        }
+        .navbar li a:hover,.navbar li a:active{
+            /* colour:rgb(226, 34, 34): */
+            text-decoration:underline;
+            color: gray;
+            
+        }
+        
+        .nav li a:hover,.nav li a:active{
+            /* colour:rgb(226, 34, 34): */
+            text-decoration:underline;
+            color: gray;
+            
+        }
+        nav {
+            background-color: rgb(94, 162, 235);
+            padding: 10px 0;
+            text-align: center;
+            /* width: 800px; */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+        nav ul li a {
+            color: #0a0909;
+            text-decoration: none;
+            font-size: 30px;
+        }
+        nav ul li a i {
+            margin-right: 5px;
+        } 
+        
+        .set{
+            background-color: rgb(232, 234, 236);
+            
+        }
+        .search{
+            padding: 30px 30px 30px 30px;
+            margin: 30px;
+            height: 7px;
+            /* width: 30px; */
+            text-align: right;
+
+        }
+        a:hover{
+       color:rgba(255, 255, 255, 0.884);
+       background-color: black;
+       }
+       .get {
+        background-color: rgb(14, 160, 228);
+        color:black;
+        padding: 12px 12px 12px 12px;
+        margin: 10px 10px 10px 10px;
+        border-radius: 80px;
+        width: 100px;
+        /* font-size: ; */
+        /* <input type="Get start" value="Get start"> */
+        }
+        .san{
+             text-align: center; 
+            margin-top:200px;
+            font-weight: 900;
+            font-size: 30px;
+            /* float: right; */
+            /* float:left; */
+            display: inline-block;
+            
+        }
+        h1{
+            font-size: 50px;
+            font-family: ink free;
+        }
+        h4{
+            font-size:20px ;
+            /* font-family: ink free; */
+        }
+        body{
+            /* background-color: rgb(231, 77, 134); */
+            /* background-image: "img.png"; */
+       background-image: url(data:image/jpeg;base64,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);
+    background-size: cover;  
+    background-repeat: no-repeat;
+    
+    }
+    img{
+        display: inline-block;
+        /* margin-top: 400px; */
+        font-size: 10px;
+    }
+    .image{
+        margin-top: 300px;
+        margin-left: 100px;
+        display: inline-block;
+        font-size: 20px;
+        font-weight:bold
+    }
+    .temp{
+        display: inline-block;
+        margin-left: 300px;
+        height: 400px;
+        width: 100px;
+    }
+    h3{
+         color: rgb(44, 140, 192);
+    }
+    .me{
+        text-align: center;
+        margin-left: 8%;
+    }
+    .one{
+        display: inline-block;
+        margin-left: 100px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .two{
+        display: inline-block;
+         margin-left: 160px;  
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .three{
+        display: inline-block;
+          margin-left: 170px; 
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .four{
+        display: inline-block;
+        margin-left: 100px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .five{
+        display: inline-block;
+         margin-left: 160px;  
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .six{
+        display: inline-block;
+        margin-left: 170px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .draw{
+        background-color: rgb(14, 160, 228);
+        color:black;
+        padding: 12px 12px 12px 12px;
+        margin: 10px 10px 10px 10px;
+        border-radius: 80px;
+        width: 100px;
+        /* font-size: ; */
+        margin-left: 50%;
+        text-align: center;
+    }
+    .last{
+        background-image: url(https://img.freepik.com/free-photo/abstract-textured-backgound_1258-30506.jpg);
+        text-align: center;
+      
+
+    }
+    .start{
+        background-color: rgb(14, 160, 228);
+        color:black;
+        margin-left: 30%;
+        padding: 19px 12px 12px 12px;
+        margin: 10px 10px 10px 10px;
+        border-radius: 80px;
+        width: 200px;
+        height: 16px;
+    }
+    .web{
+        display: inline-block;
+        margin-left: 50px;
+        font-weight: 900;
+    }
+    .site{
+        display: inline-block;
+        margin-left:100px ;
+        font-weight: 900;
+    }
+    .mee{
+        display: inline-block;
+        margin-left: 150px;
+        font-weight: 900;
+    }
+    .icon{
+        display: inline-block;
+       
+    }
+    .she{
+        display: inline-block;
+          margin-right: 10px;  
+         /* float: right; */
+         margin-top: 50px;
+         margin-left: 50;
+         /* width: ; */
+         width: 300px;
+    }
+    .you{
+        display: inline-block;
+        width: 500px;
+        height: 500px;
+        margin-top: 150px;margin-left: 300px;
+    }
+    .button{
+        height:30px;
+        font-size: 20px;
+    }
+    .it{
+        height: 150px;
+        width: 200px;
+    }
+    .shr{
+        display: flex;
+    }
+    .social-icons {
+            list-style: none;
+            padding: 0;
+            margin-left: 40%;
+        }
+        .social-icons li {
+            display: inline-block;
+            
+        }
+        .social-icons li:last-child {
+            margin-right: 0; 
+        }
+        .social-icons li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            text-decoration: none;
+           
+        }
+        .social-icons li a img {
+            width: 100%;
+            height: auto;
+            margin-left: 50%;
+        }
+        .pixel{
+            font-size: 50px;
+        }
+        #san{
+            font-size: 40px;
+            display: inline-block;
+            /* margin-left: 50%; */
+        }
+        #var{
+            font-size: 30px;
+        }
+        .search{
+            display: inline-block;
+            margin-left: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <br><br><br>
+        <nav>
+            <ul>
+                <li><a href="1.HTML"><i class="fas fa-home"></i> Home</a></li> &nbsp; &nbsp; &nbsp;
+                <li><a href="about.html"><i class="fas fa-user"></i> About</a></li>  &nbsp; &nbsp; &nbsp;
+                <li><a href="2.html"><i class="fas fa-file"></i> Login</a></li>  &nbsp; &nbsp; &nbsp;
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input class="button" type="text"name="search" placeholder="search" required>
+                <input class="button" type="text"name="login" placeholder="login" required>
+            </ul>
+        </nav>  
+     
+            <!-- <div class="search">
+                <input class="button" type="text"name="search" placeholder="search" required>
+                <input class="button" type="text"name="login" placeholder="login" required>
+            </div> -->
+            <!-- </ul> -->
+        <!-- </nav>    -->
+    <!-- </div>    -->
+</header>
+<!-- </div>    -->
+<!-- <h1>build your<u><b> resume</b></u>  fast and easy</h1> -->
+<div class="shr">
+
+            <div class="san">
+                <h1 id="san">build your<u><b> resume</b></u>  fast and easy</h1>
+                <h4 id="var">fill in your details.choose an appropriate <br>template and download your resume in no time</h4>
+                <!-- <p id="get">Get start</p> --> <br>
+                <a href="2.html" class="get">Get Start</button></a>
+                </div>
+    <div class="she">
+        <img class="you" src="https://www.mooc.org/hubfs/cybersecurity-computer-science.jpg" alt="">
+    </div>
+</div> 
+      <div class="image">
+        <h1 class="pixel">We Deliver The Best</h1>
+       <div> 
+        <p> <img src="icon.png" alt="" class="img"> &nbsp;&nbsp; 
+             Proven CV Templates to increase Hiring Chance</p>
+     </div>
+     <div >
+        
+        <p> <img src="icon.png" alt="" class="img"> &nbsp;&nbsp;Creative and Clean Templates Design</p>
+     </div>
+     <div > 
+            
+        <p> <img src="icon.png" alt="" class="img">&nbsp;&nbsp; Easy and Intuitive Online CV Builder</p>
+     </div>
+     <div >
+            
+        <p> <img src="icon.png" alt="" class="img"> &nbsp;&nbsp;Free to use. Developed by hiring professionals.</p>
+     </div>
+     <div >
+      
+        <p> <img src="icon.png" alt="" class="img">&nbsp;&nbsp;Fast Easy CV and Resume Formatting
+        </p>
+     </div>
+     <div >
+     
+        <p> <img src="icon.png" alt="" class="img">&nbsp;&nbsp;Recruiter Approved Phrases.</p>
+     </div>
+ </div>
+<div class="temp">
+    <img src="template.jpg" alt="" width="300px" height="300px">
+</div>
+<br><br><br>
+     <div class="me">
+        <h1>Get hired 33% faster with our feature-packed and <br>easy-to-use resume builder app</h1>
+     
+    </div>
+    <br><br>
+    <div class="one">
+        <img src="ai.jpg" alt="">
+        <h4>AI resume builder</h4>
+        <p>Use AI-enabled resume suggestions in the <br> Resume Builder app to write a keyword-rich <br> resume.</p>
+    </div>
+    <div class="two">
+        <img src="resume.jpg" alt="">
+        <h4>Professional templates</h4>
+        <p>Choose from over 30 applicant tracking systems <br> (ATS)-friendly modern and professional templates.</p>
+    </div>
+    <div class="three">
+        <img src="color.jpg" alt="">
+        <h4>Customize fonts and colors</h4>
+        <p>Select custom fonts and colors on any resume <br> template.</p>
+    </div>
+    <div class="four">
+        <img src="exa.jpg" alt="">
+    <h4>Free resume examples</h4>
+    <p>Use our more than 500 resume examples and <br> templates to see what a great resume looks like <br> in your field.</p>
+    </div>
+    <div class="five">
+        <img src="ats.jpg" alt="">
+        <h4>ATS-friendly templates</h4>
+        <p>Sail through applicant tracking systems with <br> resume templates that appeal to both machines <br> and humans.</p>
+    </div>
+    <div class="six">
+        <img src="search.jpg" alt="">
+        <h4>Expert tips and guidance</h4>
+        <p>Get help every step of the way as you build your <br> resume with expert tips and suggested phrases.</p>
+    </div>
+    <br><br>
+    <div class="draw">
+        <a href="2.html">Get start</button></a>
+    </div>
+    <br>
+    <div class="last">
+        <br><br>
+        <h1>Let’s Land Your Dream <br> Job Together</h1>
+        <a href="2.html" class="start" >Start Your Resume Now</button></a> <br><br><br>
+        <h4>As seen in</h4>
+        <div class="mic">
+            <img src="micro.jpg" alt="" width=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="andr.jpg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="mns.jpg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="yah.jpg" alt=""><br><br><br>
+            <img src="boom.jpg" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <img src="fob.jpg" alt="">
+            <br><br><br>
+        </div>
+
+    </div>
+    <br><br><br><br><br>
+    <div class="web">
+        <h2>Build Your Resume</h2>
+        
+        <ul>
+            <li>Baic Resume Examples</li>
+            <li>How to write a Resume</li>
+            <li>Resume Builder App</li>
+            <li>Cover Letter Builder</li>
+            <li>Resume Examples</li>
+            <li>Resume Templates</li>
+        </ul>
+    </div>
+    
+    <div class="site">
+        <h2>Career Resources</h2>
+        <ul>
+            <li>Cover Letter Examples</li>
+            <li>How To Write a Cover Letter</li>
+            <li>Job Search Resource Center</li>
+            <li>Thank You Note Examples</li>
+        </ul>
+    </div>
+    <div class="mee">
+        <h2>About Resume Builder</h2>
+        <ul>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+            <li>Press</li>
+        </ul>
+    </div>
+    <br><br><br><br><br><br>
+    <ul class="social-icons">
+        <li><a href="https://www.linkedin.com/" target="_blank"><img  src="https://www.svgrepo.com/show/205292/linkedin.svg" alt="LinkedIn"></a></li>
+        <li><a href="https://github.com/" target="_blank"><img  src="https://www.svgrepo.com/show/94698/github.svg" alt=""></a></li>
+        <li><a href="https://twitter.com/" target="_blank"><img  src="https://www.svgrepo.com/show/20626/twitter.svg" alt="Twitter"></a></li>
+    </ul>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
+

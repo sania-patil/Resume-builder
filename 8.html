@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         h2{
+            color: rgb(23, 23, 227);
+            font-size: 30px;
+        }
+        p{
+            /* color: rgb(23, 23, 227); */
+        }
+        .next{
+           
+            background-color: rgb(14, 160, 228);
+            font-color:black;
+            padding: 12px 12px 12px 12px;
+            margin: 10px 10px 10px 10px;
+            border-radius: 80px;
+            width: 70px;
+            font-size:20px ;
+            margin-left: 280px;
+            display: inline-block;
+        }
+        .submit{
+                background-color: rgb(14, 160, 228);
+                border-radius: 80px;
+                width: 90px;
+                font-size:20px ;
+                height: 30px;
+                text-align: center;
+            }
+        hr {
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0px;
+    height: 3px;
+    border-style: inset;
+    border-width: 1px;
+    width: 550px;
+    text-align: left;
+    border-style: solid;
+    border-color:rgb(27, 22, 22);
+    background-color: black;
+    border-radius: 5px;
+}
+.editor-form .form-row{
+    display:flex;
+    grid-column-gap: 70px;
+    grid-template-columns: 1fr;
+    margin-bottom: 12px;
+    justify-content:left ;
+    /* vertical-align: baseline; */
+}
+
+.editor-form .form-row.column-2 {
+    grid-template-columns: 1fr 1fr;
+    vertical-align: baseline;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    width: 36%;
+    height: 50%;
+}
+.template {
+                background-color: rgb(14, 160, 228);
+            font-color:black;
+            padding: 12px 12px 12px 12px;
+            margin: 10px 10px 10px 10px;
+            border-radius: 80px;
+            width: 70px;
+            font-size:30px ;
+            /* margin-left: 400px; */
+            display: inline-block;
+            }
+</style>
+</head>
+<body>
+    <div class="template">
+        <a href="8.html">Back</button></a>
+    </div>
+   <div class="next">
+        <a href="9.html">Next-></button></a>
+    </div>
+    <hr>
+    <div>
+        <h2>PROFESSIONAL DETAILS</h2>
+        <p><b>Tell us about your most recent job. </b></p>
+    </div>
+    <form action="backend.php">
+        <div class="editor-form">
+
+            <div class="form-row column-2">
+                <div class="field-wrap">
+                    <br>
+                    <label for="fname" class="label">Company Name </label><br>
+                    <input type="text" class="validate" name="fname" value="">
+                </div>
+                <div class="field-wrap">
+                    <br>
+                    <label for="lname" class="label">Position Title</label><br>
+                    <input type="text" class="validate" name="lname" value="">
+                </div>
+            </div>
+
+            <div class="form-row column-2">
+                <div class="field-wrap">
+                    <label for="fname" class="label">Start Date </label><br>
+                    <input type="text" class="validate" name="fname" value="">
+                </div>
+                <div class="field-wrap">
+                    <label for="lname" class="label">End Date</label><br>
+                    <input type="text" class="validate" name="lname" value="">
+                </div>
+            </div>
+
+            <div class="form-row column-2">
+                <div class="field-wrap">
+                    <label for="fname" class="label">Key Skills </label><br>
+                    <input type="text" class="validate" name="fname" value="">
+                </div>
+                <div class="field-wrap">
+                    <label for="lname" class="label">Languages</label><br>
+                    <input type="text" class="validate" name="lname" value="">
+                </div>
+            </div>
+        </div>
+
+        <div class="description">
+            <br>
+            <label for="lname" class="label">Work summary</label><br>
+            <input type="text" class="validate" name="desc" value="">
+        </div>
+
+    </form>
+   
+</body>
+</html>
+<br><br>
+<div class="submit">
+    <a href="9.html">Submit</button></a>
+</div>
+</body>
+</html>
